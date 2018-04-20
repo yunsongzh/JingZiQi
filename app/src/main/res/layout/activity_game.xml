@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zys.jingziqi.MainActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sandy_beach" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+        <fragment
+            android:id="@+id/fragment_game"
+            class="com.zys.jingziqi.GameFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_game" />
+        <fragment
+            android:id="@+id/fragment_game_controls"
+            class="com.zys.jingziqi.ControlFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_control" />
+
+    </LinearLayout>
+
+    <include layout="@layout/thinking"/>
+
+</FrameLayout>
+
